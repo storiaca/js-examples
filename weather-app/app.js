@@ -23,7 +23,7 @@ function showWeather(e) {
 
     xml.open(
       "GET",
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4f1f542b23f55d467d13166657a32dbd&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric`
     );
 
     xml.onreadystatechange = function () {
