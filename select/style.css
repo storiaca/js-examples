@@ -91,3 +91,28 @@ body {
   top: 4px;
   font-size: 1.2em;
 }
+
+/* tailwind */
+/* .select-wrapper {
+  @apply relative h-10 w-80 bg-white rounded border border-hs-gray-300 before:content-[''] before:absolute before:w-2 before:h-2 before:border-hs-gray-800 before:right-5 before:top-[14px] before:border-b-2 before:border-r-2 before:rotate-45 before:z-10 before:transition before:duration-500 before:pointer-events-none md2:w-full;
+}
+
+.select-wrapper.active {
+  @apply before:content-[''] before:top-[18px] before:rotate-[225deg];
+}
+
+.select-wrapper .select-box {
+  @apply absolute top-0 left-0 w-full h-full cursor-pointer bg-white outline-none pl-3 text-hs-gray-800 placeholder-hs-gray-800 font-r;
+}
+
+.select-wrapper .select-option {
+  @apply absolute text-hs-gray-800 rounded top-[38.5px] w-full bg-white first-line:overflow-hidden opacity-100 visible;
+}
+
+.select-wrapper.active .select-option {
+  @apply visible opacity-100;
+}
+
+.select-wrapper .select-option div {
+  @apply font-r text-14 cursor-pointer px-3 py-2 rounded border border-hs-gray-300 hover:font-bold;
+} */
