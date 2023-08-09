@@ -43,7 +43,7 @@ const getNumberOfLines = () => {
     const lines = promt("Enter the number of lines to bet on(1-3): ");
     const numberOfLines = parseFloat(lines);
 
-    if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines >= 3) {
+    if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
       console.log("Invalid number of lines, try again.");
     } else {
       return numberOfLines;
@@ -66,12 +66,16 @@ const getBet = (balance, lines) => {
 
 const spin = () => {
   const symbols = [];
-  for (const [count, symbol] of Object.entries(SYMBOLS_COUNT)) {
-    console.log(count, symbol);
+  for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
+    for (let i = 0; i < count; i++) {
+      symbols.push(symbol);
+    }
   }
+  const reels = [[], [], []];
 };
 
 spin();
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
+// 33:43
