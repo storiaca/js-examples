@@ -72,10 +72,16 @@ const spin = () => {
     }
   }
   const reels = [[], [], []];
+  for (let i = 0; i < COLS; i++) {
+    const reelSymbols = [...symbols];
+    for (let j = 0; j < ROWS; j++) {
+      const randomIndex = Match.floor(Math.random() * reelSymbols.length);
+      const selectedSymbol = reelSymbols[randomIndex];
+    }
+  }
 };
 
 spin();
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
-// 33:43
