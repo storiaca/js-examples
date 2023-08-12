@@ -71,17 +71,23 @@ const spin = () => {
       symbols.push(symbol);
     }
   }
-  const reels = [[], [], []];
+  const reels = [];
   for (let i = 0; i < COLS; i++) {
+    reels.push([]);
     const reelSymbols = [...symbols];
     for (let j = 0; j < ROWS; j++) {
-      const randomIndex = Match.floor(Math.random() * reelSymbols.length);
+      const randomIndex = Math.floor(Math.random() * reelSymbols.length);
       const selectedSymbol = reelSymbols[randomIndex];
+      reels[i].push(selectedSymbol);
+      reelSymbols.splice(randomIndex, 1);
     }
   }
+
+  return reels;
 };
 
-spin();
+const reels = spin();
+console.log(reels);
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
