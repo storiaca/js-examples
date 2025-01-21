@@ -179,11 +179,15 @@ function stringChallenge(str) {
   }
 
   wordsClean.reverse();
-  let w = "newaddedstring";
+  let w = ":newaddedstring";
 
-  let words = wordsClean.join("");
+  let last = [...wordsClean, w];
+
+  //console.log(last);
+
+  last = last.join("");
   //console.log(typeof words);
-  let last = words.concat(":", w);
+  //let last = words.concat(":", w);
   return last;
 }
 
