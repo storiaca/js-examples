@@ -160,3 +160,32 @@ console.log(strCount("", "l")); // 0
 //   return count;
 
 // }
+
+/**
+ * String challenge
+ */
+
+function stringChallenge(str) {
+  // let wordsClean = str.replace(/[^a-zA-Z ]/g, '').split('')
+  let wordsClean = str
+    .replace(/[^\w\s\']/g, " ")
+    .replace(/\s+/g, " ")
+    .split(" ");
+
+  for (let i = 1; i < wordsClean.length; i++) {
+    wordsClean[i] =
+      wordsClean[i].charAt(0).toUpperCase() +
+      wordsClean[i].slice(1).toLowerCase();
+  }
+
+  wordsClean.reverse();
+  let w = "newaddedstring";
+
+  let words = wordsClean.join("");
+  //console.log(typeof words);
+  let last = words.concat(":", w);
+  return last;
+}
+
+console.log(stringChallenge("cats AND*Dogs-are Awesome!")); // ['cats', 'and', 'dogs', 'are', 'awesome'];
+console.log(stringChallenge("a b c d-e-f%g"));
